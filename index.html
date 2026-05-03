@@ -2,57 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Celestial Cootie Catcher</title>
-
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
 
+<body>
   <main class="app">
     <p class="brand">DivCreates Logic Lab</p>
 
     <section id="startScreen" class="screen active">
+      <div class="moon-mark">☾ ✦ ☽</div>
       <h1>Celestial Cootie Catcher</h1>
-      <button onclick="goToColors()">Begin</button>
+      <p class="subtitle">Pick a shade, then choose a number. Let the stars be dramatic.</p>
+      <button class="primary-btn" onclick="goToColors()">Begin the reading</button>
     </section>
 
     <section id="colorScreen" class="screen">
-  <h1>Pick your shade</h1>
-  <p class="subtitle">Choose the one that pulls you in first.</p>
+      <p class="brand">DivCreates Logic Lab</p>
+      <h1>Pick your shade</h1>
+      <p class="subtitle">Choose the one that pulls you in first.</p>
 
-  <div class="options">
-    <button class="color-btn rose" onclick="chooseColor('Rose')">Rose</button>
-    <button class="color-btn sapphire" onclick="chooseColor('Sapphire')">Sapphire</button>
-    <button class="color-btn emerald" onclick="chooseColor('Emerald')">Emerald</button>
-    <button class="color-btn amethyst" onclick="chooseColor('Amethyst')">Amethyst</button>
-    <button class="color-btn gold" onclick="chooseColor('Gold')">Gold</button>
-    <button class="color-btn midnight" onclick="chooseColor('Midnight')">Midnight</button>
-  </div>
-</section>
-    <section id="numberScreen" class="screen">
-  <h1>Pick a number</h1>
-  <p class="subtitle" id="chosenColorText">Now choose your number.</p>
+      <div class="shade-grid">
+        <button class="shade-card rose" onclick="chooseColor('Rose')">
+          <span class="icon">✧</span>
+          Rose
+        </button>
 
-  <div class="options">
-    <button class="number-btn" onclick="chooseNumber(3)">3</button>
-    <button class="number-btn" onclick="chooseNumber(6)">6</button>
-    <button class="number-btn" onclick="chooseNumber(9)">9</button>
-    <button class="number-btn" onclick="chooseNumber(11)">11</button>
-    <button class="number-btn" onclick="chooseNumber(14)">14</button>
-    <button class="number-btn" onclick="chooseNumber(17)">17</button>
-    <button class="number-btn" onclick="chooseNumber(21)">21</button>
-    <button class="number-btn" onclick="chooseNumber(24)">24</button>
-    <button class="number-btn" onclick="chooseNumber(27)">27</button>
-    <button class="number-btn" onclick="chooseNumber(30)">30</button>
-  </div>
-</section>
-    <section id="fortuneScreen" class="screen">
-      <h1>Your fortune</h1>
-      <p id="fortuneText"></p>
-      <button onclick="restartGame()">Restart</button>
+        <button class="shade-card sapphire" onclick="chooseColor('Sapphire')">
+          <span class="icon">◇</span>
+          Sapphire
+        </button>
+
+        <button class="shade-card emerald" onclick="chooseColor('Emerald')">
+          <span class="icon">☾</span>
+          Emerald
+        </button>
+
+        <button class="shade-card amethyst" onclick="chooseColor('Amethyst')">
+          <span class="icon">✦</span>
+          Amethyst
+        </button>
+
+        <button class="shade-card gold" onclick="chooseColor('Gold')">
+          <span class="icon">☼</span>
+          Gold
+        </button>
+
+        <button class="shade-card midnight" onclick="chooseColor('Midnight')">
+          <span class="icon">☽</span>
+          Midnight
+        </button>
+      </div>
     </section>
 
+    <section id="numberScreen" class="screen">
+      <p class="brand">DivCreates Logic Lab</p>
+      <h1>Pick a number</h1>
+      <p class="subtitle" id="chosenColorText">Now choose your number.</p>
+
+      <div class="number-grid">
+        <button onclick="chooseNumber(3)">3</button>
+        <button onclick="chooseNumber(6)">6</button>
+        <button onclick="chooseNumber(9)">9</button>
+        <button onclick="chooseNumber(11)">11</button>
+        <button onclick="chooseNumber(14)">14</button>
+        <button onclick="chooseNumber(17)">17</button>
+        <button onclick="chooseNumber(21)">21</button>
+        <button onclick="chooseNumber(24)">24</button>
+        <button onclick="chooseNumber(27)">27</button>
+        <button onclick="chooseNumber(30)">30</button>
+      </div>
+    </section>
+
+    <section id="fortuneScreen" class="screen">
+      <p class="brand">DivCreates Logic Lab</p>
+      <h1>Your fortune</h1>
+
+      <div class="fortune-card">
+        <p id="fortuneLabel" class="fortune-label"></p>
+        <p id="fortuneText" class="fortune-text"></p>
+        <button class="primary-btn" onclick="restartGame()">Ask the stars again</button>
+      </div>
+    </section>
   </main>
 
   <script src="js/script.js"></script>

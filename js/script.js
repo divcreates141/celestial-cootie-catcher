@@ -16,9 +16,12 @@ const fortunes = {
 function showScreen(screenId) {
   document.querySelectorAll(".screen").forEach(screen => {
     screen.classList.remove("active");
+    screen.style.display = "none";
   });
 
-  document.getElementById(screenId).classList.add("active");
+  const targetScreen = document.getElementById(screenId);
+  targetScreen.classList.add("active");
+  targetScreen.style.display = "block";
 }
 
 function goToColors() {

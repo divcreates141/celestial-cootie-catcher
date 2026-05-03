@@ -18,17 +18,35 @@
     </section>
 
     <section id="colorScreen" class="screen">
-      <h1>Pick your shade</h1>
-      <button onclick="chooseColor('Rose')">Rose</button>
-      <button onclick="chooseColor('Sapphire')">Sapphire</button>
-    </section>
+  <h1>Pick your shade</h1>
+  <p class="subtitle">Choose the one that pulls you in first.</p>
 
+  <div class="options">
+    <button class="color-btn rose" onclick="chooseColor('Rose')">Rose</button>
+    <button class="color-btn sapphire" onclick="chooseColor('Sapphire')">Sapphire</button>
+    <button class="color-btn emerald" onclick="chooseColor('Emerald')">Emerald</button>
+    <button class="color-btn amethyst" onclick="chooseColor('Amethyst')">Amethyst</button>
+    <button class="color-btn gold" onclick="chooseColor('Gold')">Gold</button>
+    <button class="color-btn midnight" onclick="chooseColor('Midnight')">Midnight</button>
+  </div>
+</section>
     <section id="numberScreen" class="screen">
-      <h1>Pick a number</h1>
-      <button onclick="chooseNumber(1)">1</button>
-      <button onclick="chooseNumber(2)">2</button>
-    </section>
+  <h1>Pick a number</h1>
+  <p class="subtitle" id="chosenColorText">Now choose your number.</p>
 
+  <div class="options">
+    <button class="number-btn" onclick="chooseNumber(3)">3</button>
+    <button class="number-btn" onclick="chooseNumber(6)">6</button>
+    <button class="number-btn" onclick="chooseNumber(9)">9</button>
+    <button class="number-btn" onclick="chooseNumber(11)">11</button>
+    <button class="number-btn" onclick="chooseNumber(14)">14</button>
+    <button class="number-btn" onclick="chooseNumber(17)">17</button>
+    <button class="number-btn" onclick="chooseNumber(21)">21</button>
+    <button class="number-btn" onclick="chooseNumber(24)">24</button>
+    <button class="number-btn" onclick="chooseNumber(27)">27</button>
+    <button class="number-btn" onclick="chooseNumber(30)">30</button>
+  </div>
+</section>
     <section id="fortuneScreen" class="screen">
       <h1>Your fortune</h1>
       <p id="fortuneText"></p>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celestial Cootie Catcher</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="app">
+    <p class="brand">DivCreates Logic Lab</p>
+
+    <section id="startScreen" class="screen active">
+      <h1>Celestial Cootie Catcher</h1>
+      <button onclick="goToColors()">Begin</button>
+    </section>
+
+    <section id="colorScreen" class="screen">
+      <h1>Pick your shade</h1>
+      <button onclick="chooseColor('Rose')">Rose</button>
+      <button onclick="chooseColor('Sapphire')">Sapphire</button>
+    </section>
+
+    <section id="numberScreen" class="screen">
+      <h1>Pick a number</h1>
+      <button onclick="chooseNumber(1)">1</button>
+      <button onclick="chooseNumber(2)">2</button>
+    </section>
+
+    <section id="fortuneScreen" class="screen">
+      <h1>Your fortune</h1>
+      <p id="fortuneText"></p>
+      <button onclick="restartGame()">Restart</button>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
